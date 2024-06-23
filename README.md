@@ -24,3 +24,9 @@ We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public S
 If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
 
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+-- Commandline setup -- 
+
+mkdir /tmp/uploads
+
+curl -F 'data=@./samplephotos/fridge.jpg' http://localhost:8080/upload

@@ -14,6 +14,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import examplekmp.composeapp.generated.resources.Res
 import examplekmp.composeapp.generated.resources.compose_multiplatform
 
+
 @Composable
 @Preview
 fun App() {
@@ -29,6 +30,12 @@ fun App() {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
                 }
+            }
+            val fileType = listOf("jpg", "png")
+            FilePicker(show = showFilePicker, fileExtensions = fileType) { platformFile ->
+                showFilePicker = false
+                // do something with the file
+
             }
         }
     }

@@ -1,3 +1,5 @@
 
 /.gradle
 /.kotlin
+/server/build
+/shared/build

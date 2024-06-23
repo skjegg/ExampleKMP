@@ -39,6 +39,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
+            implementation("com.darkrockstudios:mpfilepicker:3.1.0")
         }
     }
 }
