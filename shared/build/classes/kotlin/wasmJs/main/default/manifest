@@ -1,0 +1,11 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=2.0.0
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=ExampleKMP-shared-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=21lravpftcf8w.10l0tru8cpqwo 31z1ih0hidjd7.1lm1s17uhmpfy 26q7ccy73gl18.3gl6v8fv2yx9h 3oux4668fj6ii.2lnxu5dhjfar6
+serializedKlibFingerprint=31bfs0if9apxu.3mf1ok0ix0mfk
+unique_name=ExampleKMP\:shared
+wasm_targets=wasm-js

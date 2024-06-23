@@ -1,0 +1,12 @@
+{
+  "name": "ExampleKMP-shared-wasm-js",
+  "version": "0.0.0-unspecified",
+  "main": "kotlin/ExampleKMP-shared-wasm-js.mjs",
+  "devDependencies": {},
+  "dependencies": {
+    "format-util": "^1.0.5"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}
