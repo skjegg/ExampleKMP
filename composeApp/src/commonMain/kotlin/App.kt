@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.darkrockstudios.libraries.mpfilepicker.FilePicker
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -32,8 +33,8 @@ fun App() {
                 }
             }
             val fileType = listOf("jpg", "png")
-            FilePicker(show = showFilePicker, fileExtensions = fileType) { platformFile ->
-                showFilePicker = false
+            FilePicker(show = showContent, fileExtensions = fileType) { platformFile ->
+                //showFilePicker = false
                 // do something with the file
 
             }

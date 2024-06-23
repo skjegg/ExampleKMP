@@ -12,6 +12,7 @@ plugins {
 }
 
 kotlin {
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -28,6 +29,8 @@ kotlin {
         }
         binaries.executable()
     }
+
+
     
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -35,7 +38,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+    /*
     listOf(
         iosX64(),
         iosArm64(),
@@ -46,7 +49,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+    */
     sourceSets {
         
         androidMain.dependencies {
@@ -61,6 +64,8 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(projects.shared)
+            implementation(libs.ktor.client.core)
+            implementation("com.darkrockstudios:mpfilepicker:399.1.0")
         }
     }
 }
