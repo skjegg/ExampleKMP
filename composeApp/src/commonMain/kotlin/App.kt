@@ -14,11 +14,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import examplekmp.composeapp.generated.resources.Res
 import examplekmp.composeapp.generated.resources.compose_multiplatform
+import kotlinx.coroutines.*
+import kotlin.time.measureTime
 
 
 @Composable
 @Preview
 fun App() {
+    val api= ServerApi()
+    val scope = rememberCoroutineScope()
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
@@ -37,7 +41,14 @@ fun App() {
                 //showFilePicker = false
                 // do something with the file
 
-            }
+
+                val time = measureTime {
+                        val res = scope.launch { api.uploadFile(UploadFile(platformFile))}
+                    }
+                    print(time)
+                }
+
+
         }
     }
 }

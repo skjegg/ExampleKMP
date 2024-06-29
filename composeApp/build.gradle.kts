@@ -30,7 +30,28 @@ kotlin {
         binaries.executable()
     }
 
+ /*
+    js(IR) {
+        browser {
+            commonWebpackConfig {
+                // Enabling webpack support for CSS/SCSS inside Gradle
+                cssSupport { enabled.set(true) }
+                scssSupport { enabled.set(true) }
+            }
+            webpackTask {
+                // Renaming the final output file
+                mainOutputFileName = "my-output-file-name.js"
 
+                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
+                    static = (static ?: mutableListOf()).apply {
+                        // Serve sources to debug inside browser
+                        add(project.projectDir.path)
+                    }
+                }
+            }
+        }
+    }
+*/
     
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -55,6 +76,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -65,6 +87,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(projects.shared)
             implementation(libs.ktor.client.core)
+            //implementation(libs.ktor.client.cio)
             implementation("com.darkrockstudios:mpfilepicker:399.1.0")
         }
     }
