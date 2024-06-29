@@ -1,9 +1,9 @@
-
 /.gradle
 /.kotlin
 /server/build
 /shared/build
-/build/js
-/build/js
+/build/
 /composeApp/build
 /shared/build
+/composeApp/build/
+/build
